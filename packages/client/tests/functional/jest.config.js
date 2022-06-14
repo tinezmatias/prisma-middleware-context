@@ -1,14 +1,7 @@
 const forceTranspile = require('../../../../helpers/jest/forceTranspile')
 
 module.exports = {
-  testMatch: [
-    '**/*.ts',
-    '!(**/*.d.ts)',
-    '!(**/_utils/**)',
-    '!(**/_matrix.ts)',
-    '!(**/_schema.ts)',
-    '!(**/.generated/**)',
-  ],
+  testMatch: ['**/*.ts', '!(**/*.d.ts)', '!(**/_utils/**)', '!(**/_*.ts)', '!(**/.generated/**)'],
   transform: {
     '^.+\\.(m?j|t)s$': '@swc/jest',
   },
