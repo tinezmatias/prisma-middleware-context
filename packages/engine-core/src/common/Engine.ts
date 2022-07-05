@@ -1,12 +1,15 @@
-import type { DataSource, DMMF, GeneratorConfig } from '@prisma/generator-helper'
+import type { DataSource, DMMF, EnvValue, GeneratorConfig } from '@prisma/generator-helper'
 
 import type { Metrics, MetricsOptionsJson, MetricsOptionsPrometheus } from './types/Metrics'
 import type { QueryEngineRequestHeaders, QueryEngineResult } from './types/QueryEngine'
 import type * as Transaction from './types/Transaction'
-// import type { InlineDatasources } from '../../../client/src/generation/utils/buildInlineDatasources'
 
 export interface FilterConstructor {
   new (config: EngineConfig): Engine
+}
+
+export type InlineDatasource = {
+  url: EnvValue
 }
 
 // TODO Move shared logic in here
@@ -74,7 +77,7 @@ export interface EngineConfig {
    * The contents of the datasource url saved in a string
    * @remarks only used for the purpose of data proxy
    */
-  inlineDatasources?: any
+  inlineDatasources?: Record<string, InlineDatasource>
 
   /**
    * The string hash that was produced for a given schema
