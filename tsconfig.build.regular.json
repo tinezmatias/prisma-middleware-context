@@ -2,7 +2,11 @@
   "compilerOptions": {
     "target": "es2018",
     "module": "commonjs",
-    "lib": ["es2018"],
+    "lib": [
+      "es2018",
+      // WeakRef is supported by Node 14.6+
+      "ES2021.WeakRef"
+    ],
     "esModuleInterop": true,
     "isolatedModules": true,
     "sourceMap": true,
