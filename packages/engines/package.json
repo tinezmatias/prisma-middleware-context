@@ -10,13 +10,13 @@
     "@prisma/engines-version": "4.1.0-19.6775228c8cc200d999f5e0948ca5dfdc45bac257",
     "@prisma/fetch-engine": "workspace:*",
     "@prisma/get-platform": "workspace:*",
-    "@swc/core": "1.2.197",
+    "@swc/core": "1.2.210",
     "@swc/jest": "0.2.21",
     "@types/jest": "28.1.4",
     "@types/node": "16.11.43",
     "execa": "5.1.1",
     "jest": "28.1.2",
-    "typescript": "4.7.3"
+    "typescript": "4.7.4"
   },
   "repository": {
     "type": "git",
